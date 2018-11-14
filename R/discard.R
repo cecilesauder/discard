@@ -21,3 +21,4 @@ discard <- function(.data, ...) {
   quos <- reduce(quos(...), function(x, y) expr(!!x & !!y))
   filter(.data, !(!!quos))
 }
+##travis test
