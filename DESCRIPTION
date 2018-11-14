@@ -10,7 +10,6 @@ Authors@R: person(person(given = "Romain",
              role = c("aut", "cre"),
              email = "cecile.sauder@gmail.com")
              )
-             
 Description: package with a discard function, to remove filtered data of a tibble.
 Depends: R (>= 3.4.4)
 License:  MIT + file LICENSE
