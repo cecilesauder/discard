@@ -1,15 +1,10 @@
 Package: discard
 Title: What the Package Does (one line, title case)
 Version: 0.0.0.9000
-Authors@R: person(person(given = "Romain",
-             family = "Francois",
-             role = c("aut"),
-             email = "romain@rstudio.com"),
-             person(given = "Cecile",
-             family = "Sauder",
-             role = c("aut", "cre"),
-             email = "cecile.sauder@gmail.com")
-             )
+Authors@R: c(
+            person("Romain", "Francois", role = c("aut", "cre"), email = "romain@rstudio.com"),
+            person("Cecile", "Sauder", role = c("aut"), email = "cecile.sauder@gmail.com")
+            )
 Description: package with a discard function, to remove filtered data of a tibble.
 Depends: R (>= 3.4.4)
 License:  MIT + file LICENSE
