@@ -8,9 +8,9 @@
 \usage{
 discard_all(.tbl, .vars_predicate)
 
-discard_at(.tbl, .vars, .vars_predicate, .preserve = TRUE)
+discard_at(.tbl, .vars, .vars_predicate)
 
-discard_if(.tbl, .predicate, .vars_predicate, .preserve = TRUE)
+discard_if(.tbl, .predicate, .vars_predicate)
 }
 \arguments{
 \item{.tbl}{A tbl object}
@@ -18,8 +18,6 @@ discard_if(.tbl, .predicate, .vars_predicate, .preserve = TRUE)
 \item{.vars_predicate}{See [dplyr::filter_all()]}
 
 \item{.vars}{See [dplyr::filter_all()]}
-
-\item{.preserve}{See [dplyr::filter_all()]}
 
 \item{.predicate}{See [dplyr::filter_all()]}
 }

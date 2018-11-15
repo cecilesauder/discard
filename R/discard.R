@@ -39,7 +39,6 @@ tidyselect::starts_with
 #' @param .tbl A tbl object
 #' @param .vars_predicate See [dplyr::filter_all()]
 #' @param .vars See [dplyr::filter_all()]
-#' @param .preserve See [dplyr::filter_all()]
 #' @param .predicate See [dplyr::filter_all()]
 #'
 #' @examples
@@ -58,16 +57,16 @@ discard_all <- function(.tbl, .vars_predicate) {
 
 #' @rdname discard_all
 #' @export
-discard_at <- function(.tbl, .vars, .vars_predicate, .preserve = TRUE) {
+discard_at <- function(.tbl, .vars, .vars_predicate) {
   syms <- tbl_at_syms(.tbl, .vars, .include_group_vars = TRUE)
   pred <- apply_filter_syms(.vars_predicate, syms, .tbl)
-  filter(.tbl, !(!!pred), .preserve = .preserve)
+  filter(.tbl, !(!!pred))
 }
 
 #' @rdname discard_all
 #' @export
-discard_if <- function(.tbl, .predicate, .vars_predicate, .preserve = TRUE) {
+discard_if <- function(.tbl, .predicate, .vars_predicate) {
   syms <- tbl_if_syms(.tbl, .predicate, .include_group_vars = TRUE)
   pred <- apply_filter_syms(.vars_predicate, syms, .tbl)
-  filter(.tbl, !(!!pred), .preserve = .preserve)
+  filter(.tbl, !(!!pred))
 }
